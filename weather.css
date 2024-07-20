@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -9,6 +10,7 @@
 }
 body {
     background: linear-gradient(to right, #6dd5fa, #2980b9);
+    background-image: url("https://cdn.openart.ai/published/vrPeufE8NJKQgcGt9fDL/bp3DppqX_I861_1024.webp");;
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -18,17 +20,13 @@ body {
     background-size: cover;
     flex-direction: column;
 }
-
 .topic{
     margin-top: 40px;
     font-size: 30px;
     color:#ffffff;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
-
-
-
 .container {
     background-color:#0000004b;
     backdrop-filter: blur(5px);
@@ -49,6 +47,7 @@ body {
 
 
 /*First Div*/
+
 .div1 {
     background-color: transparent;
     height:45px;
@@ -58,7 +57,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-
+    transition: 1s all ease;
 }
 .searchInput{
     height: 50px;
@@ -101,8 +100,6 @@ body {
     border:none;
 }
 
-
-
 /*second Div*/
 
 .div2{
@@ -110,24 +107,29 @@ body {
     height:320px;
     width:250px;
     margin-bottom: 45px;
+    transition: 1s all ease;
 }
 #weather-image{
     width:200px;
+    transition: 1s all ease;
 }
 .temperature{
     font-size: 50px;
     font-family: Poppins;
     font-weight: 700;
+    transition: 1s all ease;
 }
 sup{
     font-size: 30px;
     font-weight: 600;
+    transition: 1s all ease;
 }
 .description{
     font-size: 25px;
     font-weight: 700;
     margin-top: -10px;
     position: relative;
+    transition: 1s all ease;
 }
 .description::after{
     content: "";
@@ -139,8 +141,6 @@ sup{
     left:-300px;
 }
 
-
-
 /*third Div*/
 
 .div3{
@@ -150,16 +150,15 @@ sup{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: 1s all ease;
 }
 .div3-1{
     display: flex;
 }
-
 .div3-2{
     display: flex;
     text-align: center;
 }
-
 .disc{
     font-size: 20px;
     font-weight: 700;
@@ -168,17 +167,75 @@ sup{
     font-size: 12px;
     font-weight: 700;
 }
-
 .iconn{
     font-size: 40px;
     font-weight: 800;
     margin-right: 7px;
 }
-
-
 .hidden{
     display: none;
 }
+
+/*advice div*/
+
+.temperature-advice {
+    background-color:#0000004b;
+    backdrop-filter: blur(3px);
+    text-align: center;
+    border: #fff 3px solid;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 2px 2px 10px white ;
+    margin:60px 5px 20px 5px;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+    transition: 1s all ease;
+    letter-spacing: 1.5px;
+}
+
+/*media*/
+
+@media (max-width:450px){
+    .topic{
+        font-size: 25px;
+    }
+    .container {
+        max-height:460px;
+        height:90px;
+        width:280px;
+        border-radius: 15px;
+        backdrop-filter: blur(20px);
+    }
+    .div2{
+        background-color: transparent;
+    }
+    #weather-image{
+        width:150px;
+    }
+    .temperature{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    sup{
+        font-size: 20px;
+    }
+    .description{
+        font-size: 20px;
+    }
+    .description::after{
+        top:47px;
+        left:-300px;
+    }
+    .temperature-advice {
+        backdrop-filter: blur(10px);
+    }
+}
+
+
+
+
 
 
 
